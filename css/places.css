@@ -1,0 +1,67 @@
+  body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poiret One", sans-serif;
+  }
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #2b3457;
+    position: relative;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: darkblue;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (home) */
+  .active {
+    background-color: #0454aa;
+    color: white;
+  }
+
+  .table2{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .table2 img {
+    max-width: 90%;  /* scale down if too big */
+    height: auto;     /* keep aspect ratio */
+    display: block;   /* remove inline spacing issues */
+    margin: 0 auto;   /* center image inside cell */
+    border-radius: 10px;
+  }
+
+  .caption {
+    padding: 20px;
+  }

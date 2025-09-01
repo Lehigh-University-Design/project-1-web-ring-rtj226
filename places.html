@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Places I've Been</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/places.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="js/places.js"></script>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="#places" class="active">Places</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+        <a href="index.html">Home</a>
+        <a href="#next">Next</a>
+        <a href="#back">Back</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="content">
+        <h1>Places I've Been</h1>
+        <table class="table2">
+            <tr>
+                <td rowspan="2"><img src="Photos/Singapore.JPG"></td>
+                <td class="caption">Ba Na Hills<br>Da Nang, Vietnam</td>
+                <td rowspan="2"><img src="Photos/Taipei.JPG"></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><img src="Photos/DaNang.JPG"></td>
+            </tr>
+            <tr>
+                <td class="caption">Marina Bay Sands<br>Singapore</td>
+                <td class="caption">Taipei 101<br>Taipei, Taiwan</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><img src="Photos/Saigon.JPG"></td>
+                <td class="caption">City Hall<br>Montreal, Canada</td>
+                <td rowspan="2"><img src="Photos/Bangkok.JPG"></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><img src="Photos/Montreal.JPG"></td>
+            </tr>
+            <tr>
+                <td class="caption">Apartment Cafe<br>Ho Chi Minh City, Vietnam</td>
+                <td class="caption">Royal Palace<br>Bangkok, Thailand</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
