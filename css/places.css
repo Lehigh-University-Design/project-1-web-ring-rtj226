@@ -47,6 +47,10 @@
     color: white;
   }
 
+  .content{
+    margin: 20px;
+  }
+
   .table2{
     width: 100%;
     text-align: left;
