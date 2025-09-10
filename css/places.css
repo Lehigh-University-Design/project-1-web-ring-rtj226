@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: "Poiret One", sans-serif;
+    width: 100%;
   }
 
 /* Top Navigation Menu */
@@ -105,3 +106,63 @@ color: black;
     padding: 20px;
     font-family: 'Raleway', 'Sans Serif';
   }
+
+  .gallery {
+    width: 75%;
+    margin: 0 auto; /* center horizontally */
+  position: relative; /* so the expanded image stays inside */
+  }
+  /* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 19%;
+  padding: 5px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  width: 100%;
+  opacity: 0.8;
+  cursor: pointer;
+  display: block;
+  border-radius: 10px;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.galleryContainer {
+  position: relative; /* relative to gallery */
+  display: none;      /* hidden by default */
+  margin-top: 20px;   /* space from grid */
+  text-align: center; /* center the expanded image */
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 40px;
+  text-shadow: 2px 2px #ff0000;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}

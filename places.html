@@ -26,7 +26,37 @@
         <i class="fa fa-bars" style="justify-content: center;"></i>
         </a>
     </div>
-
+    <section class="gallery">
+        <!-- The grid: four columns -->
+        <div class="row">
+            <div class="column">
+                <img src="Photos/SGFlat.jpg" alt="Singapore" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="Photos/VNFlat.JPG" alt="Vietnam" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="Photos/TLFlat.jpg" alt="Thailand" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="Photos/HKFlat.jpg" alt="Hong Kong" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="Photos/KLFlat.jpg" alt="Malaysia" onclick="myFunction(this);">
+            </div>
+        </div>
+        <!-- The expanding image container -->
+        <div class="galleryContainer">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        
+            <!-- Expanded image -->
+            <img id="expandedImg" style="width:100%; border-radius: 10px;">
+        
+            <!-- Image text -->
+            <div id="imgtext"></div>
+        </div>
+    </section>
     <div class="content">
         <h1>Places I've Been</h1>
         <table class="table2">
