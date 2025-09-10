@@ -1,56 +1,122 @@
+  :root {
+    --dark-color: rgb(14, 14, 96);
+    --light-color: rgb(205, 234, 244);
+  }
   body {
     margin: 0px;
     padding: 0px;
     font-family: "Poiret One", sans-serif;
   }
-  /* Style the navigation menu */
-.topnav {
-    overflow: hidden;
-    background-color: #2b3457;
+
+  .container {
+    display: block;
     position: relative;
-    width: 100%;
-    font-family: Calibri, 'Trebuchet MS', sans-serif;
-  }
-  
-  /* Hide the links inside the navigation menu (except for home) */
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  /* Style navigation menu links */
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  /* Style the hamburger menu */
-  .topnav a.icon {
-    background: darkblue;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  /* Add a grey background color on mouse-over */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Style the active link (home) */
-  .active {
-    background-color: #0454aa;
-    color: white;
+    text-align:center;
+    height: auto;
+    z-index: 0;
   }
 
+  .upper-left {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+    font-size: 100px;
+    color: var(--light-color);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  }
+
+  .bottom-left {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1;
+    font-size: 60px;
+    color: var(--light-color);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  }
+  /* Style the navigation menu */
+  /* Top Navigation Menu */
+.topnav {
+  display: flex;                /* use flex for alignment */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b3457;
+  padding: 0 10px;
+  position: relative;
+  width: 100%;
+  font-family: 'Raleway', 'Trebuchet MS', sans-serif;
+}
+
+/* All links inside the navbar */
+.topnav a {
+  display: flex;                /* center content */
+  align-items: center;
+  justify-content: center;
+  width: 50px;                  /* consistent button size */
+  height: 50px;
+  padding: 0;                   /* remove default padding */
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Home icon inside navbar */
+.topnav a img {
+  width: 24px;                  /* resize home icon */
+  height: auto;
+}
+
+/* Hamburger menu icon */
+.topnav a.icon {
+  background: none;             /* remove background */
+  font-size: 24px;              /* match home icon */
+  cursor: pointer;
+}
+
+/* Dropdown menu links (hidden by default) */
+.topnav #myLinks {
+  display: none;
+  position: absolute;
+  top: 50px;                    /* below navbar */
+  right: 0;
+  background-color: #2b3457;
+  width: 100%;                  /* full width for mobile */
+  z-index: 999;
+  flex-direction: column;
+}
+
+/* Dropdown links styling */
+.topnav #myLinks a {
+  text-align: left;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  right: 20;
+}
+
+/* Hover effect for links */
+.topnav #myLinks a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active link styling (home) */
+.topnav .active {
+  color: white;
+}
+
+/* Hover effect for top-level icons */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
   .content {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    position: relative;
+    max-width: 1080px;
+    margin: 5%;
+    font-family: 'Raleway', 'Sans Serif';
   }
 
   .content h1{
@@ -58,20 +124,56 @@
     padding-bottom: -20px;
   }
 
-  .table1 {
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-    table-layout: fixed;
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns: text + image */
+    gap: 20px;
+    align-items: center;
+    margin: 10px;
   }
-  .table1 img {
-    max-width: 100%;  /* scale down if too big */
-    height: auto;     /* keep aspect ratio */
-    display: block;   /* remove inline spacing issues */
-    margin: 0 auto;   /* center image inside cell */
+  
+  .content-grid img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
   }
-  .table1 td, th{
-    padding: 5px;
-    vertical-align: top;
+  
+  .textbox {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.6;
+    padding: 20px;
+    font-family: 'Raleway', 'Sans Serif';
+  }
+
+  .imageContainer {
+    position: relative;
+    width: 100%;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;          
+    background: rgba(0, 0, 0, 0.3);
+    color: #f1f1f1;
+    opacity: 0;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 0 0 10px 10px; 
+    transition: opacity 0.3s ease;
+    font-family: 'Raleway', 'Sans Serif';
+  }
+
+  .imageContainer:hover .overlay {
+    opacity: 1;
   }
